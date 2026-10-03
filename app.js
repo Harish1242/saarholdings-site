@@ -1,98 +1,141 @@
 (function () {
-  var links = document.getElementById("links");
-  var menu = document.getElementById("menu");
-  if (menu && links) {
-    menu.addEventListener("click", function () {
-      var open = links.classList.toggle("open");
-      menu.classList.toggle("open", open);
-      menu.setAttribute("aria-expanded", open ? "true" : "false");
-      document.body.classList.toggle("lock", open);
-    });
+  var nav = document.querySelector(".nav");
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.querySelector(".nav-links");
+  var page = document.body.getAttribute("data-page");
+  if (links && page) {
     links.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        links.classList.remove("open");
-        menu.classList.remove("open");
-        menu.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("lock");
-      });
+      if (a.getAttribute("data-nav") === page) a.classList.add("on");
     });
   }
-  var file = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  if (!file) file = "index.html";
-  document.querySelectorAll(".links a[data-nav]").forEach(function (a) {
-    if (a.getAttribute("data-nav") + ".html" === file) a.classList.add("on");
+  if (toggle && links) {
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+  window.addEventListener("scroll", function () {
+    if (!nav) return;
+    nav.classList.toggle("solid", window.scrollY > 24);
+  }, { passive: true });
+
+  document.querySelectorAll("[data-year-btn]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var year = btn.getAttribute("data-year-btn");
+      document.querySelectorAll("[data-year-btn]").forEach(function (b) {
+        b.classList.toggle("on", b === btn);
+      });
+      document.querySelectorAll("[data-year]").forEach(function (el) {
+        el.hidden = el.getAttribute("data-year") !== year;
+      });
+    });
   });
 
-  var nodes = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
-    nodes.forEach(function (el) { io.observe(el); });
-  } else {
-    nodes.forEach(function (el) { el.classList.add("in"); });
-  }
-
-  var box = document.getElementById("metrics");
-  if (!box) return;
-  var sets = {
-    2026: [
-      ["32", "Businesses evaluated", "Entities vetted", "Since incorporation in February 2026, the board has screened and scored 32 UK high-street businesses across convenience retail, food service and commercial property."],
-      ["1", "Active subsidiary", "Trading operations", "SAAR Convenience Store Limited, SC890711, is the active trading subsidiary. Location work is underway across Glasgow, Dunblane and central Scotland."],
-      ["3", "Running projects", "Concept / staging", "Three routes are live: operational management, strategic acquisitions, and business services including SAAR-INT."],
-      ["4", "Total employees", "Expert talent", "The operating group is a small desk. Directors, technology, and the subsidiary floor."],
-      ["36", "Allied partners", "Professional allies", "Counsel, accountants and operators across Glasgow, Edinburgh and the wider UK file."]
+  var form = document.getElementById("enquiry");
+  if (!form) return;
+  var step = 1;
+  var target = "";
+  var purposes = {
+    "SAAR Holdings Ltd": [
+      "Management Services Agreement",
+      "Strategic Acquisition Offer",
+      "Business Services Project",
+      "Co-Investment / Syndication",
+      "Treasury & $SAAR Enquiry",
+      "General Corporate Matter"
     ],
-    2027: [
-      ["\u2014", "Businesses evaluated", "Target", "2027 targets are not published. The 2026 board remains the live figure."],
-      ["\u2014", "Active subsidiary", "Target", "Subsidiary count is not forecast on the public site."],
-      ["\u2014", "Running projects", "Target", "Project count follows the file, not a published target."],
-      ["\u2014", "Total employees", "Target", "Headcount is not forecast on the public site."],
-      ["\u2014", "Allied partners", "Target", "Alliance count is not forecast on the public site."]
+    "SAAR Convenience Store Ltd": [
+      "Franchise / Co-Location Partnership",
+      "Site & Property Proposal",
+      "Supplier Application",
+      "Wrap Republic / Morning Crumbs",
+      "Employment Enquiry"
     ]
   };
-  var figure = document.getElementById("figure");
-  var brief = document.getElementById("brief");
-  var briefK = document.getElementById("brief-k");
-  var year = 2026;
-  function draw() {
-    var data = sets[year];
-    box.innerHTML = "";
-    data.forEach(function (m, i) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "pick" + (i === 0 ? " on" : "");
-      b.textContent = m[1];
-      b.addEventListener("click", function () { select(i); });
-      box.appendChild(b);
+  var error = document.getElementById("form-error");
+  var label = document.getElementById("step-label");
+  var next = document.getElementById("next");
+  var back = document.getElementById("back");
+  var purpose = document.getElementById("purpose");
+  var dossier = document.getElementById("dossier");
+  var count = document.getElementById("count");
+  var sent = document.getElementById("sent");
+
+  function show(n) {
+    step = n;
+    form.querySelectorAll("[data-step]").forEach(function (el) {
+      el.hidden = el.getAttribute("data-step") !== String(n);
     });
-    select(0);
+    back.hidden = n === 1;
+    label.textContent = n === 1 ? "Step 01 — Select inquiry target"
+      : n === 2 ? "Step 02 — Identity and purpose"
+      : "Step 03 — Proposal dossier";
+    next.textContent = n === 3 ? "Send the enquiry" : "Continue";
   }
-  function select(i) {
-    var m = sets[year][i];
-    figure.textContent = m[0];
-    briefK.textContent = "Metric brief (" + year + ") \u2014 " + m[1];
-    brief.textContent = m[3];
-    box.querySelectorAll(".pick").forEach(function (el, n) {
-      el.classList.toggle("on", n === i);
+
+  form.querySelectorAll("[data-target]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      target = btn.getAttribute("data-target");
+      form.querySelectorAll("[data-target]").forEach(function (b) {
+        b.classList.toggle("on", b === btn);
+      });
+      purpose.innerHTML = '<option value="">Select purpose</option>';
+      purposes[target].forEach(function (item) {
+        var opt = document.createElement("option");
+        opt.value = item;
+        opt.textContent = item;
+        purpose.appendChild(opt);
+      });
+      error.textContent = "";
     });
-  }
-  document.getElementById("y2026").addEventListener("click", function () {
-    year = 2026;
-    document.getElementById("y2026").classList.add("on");
-    document.getElementById("y2027").classList.remove("on");
-    draw();
   });
-  document.getElementById("y2027").addEventListener("click", function () {
-    year = 2027;
-    document.getElementById("y2027").classList.add("on");
-    document.getElementById("y2026").classList.remove("on");
-    draw();
+
+  dossier.addEventListener("input", function () {
+    count.textContent = String(dossier.value.trim().length);
   });
-  draw();
+
+  back.addEventListener("click", function () {
+    error.textContent = "";
+    sent.hidden = true;
+    show(Math.max(1, step - 1));
+  });
+
+  next.addEventListener("click", function () {
+    error.textContent = "";
+    if (step === 1) {
+      if (!target) { error.textContent = "Select an inquiry target to proceed."; return; }
+      show(2);
+      return;
+    }
+    if (step === 2) {
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      if (!name || !email) { error.textContent = "Name and email are required."; return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { error.textContent = "Enter a valid email address."; return; }
+      if (!purpose.value) { error.textContent = "Select a purpose of inquiry."; return; }
+      show(3);
+      return;
+    }
+    var text = dossier.value.trim();
+    if (text.length < 20) { error.textContent = "Proposal dossier must be at least 20 characters."; return; }
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phone = document.getElementById("phone").value.trim();
+    var to = /treasury/i.test(purpose.value) ? "treasury@saarholdings.co.uk" : "operations@saarholdings.co.uk";
+    var body = [
+      "Inquiry target: " + target,
+      "Full name: " + name,
+      "Email: " + email,
+      "Phone: " + (phone || "Not given"),
+      "Purpose: " + purpose.value,
+      "",
+      "Proposal dossier:",
+      text,
+      "",
+      "Sent from the SAAR Holdings website enquiry form. This is an enquiry only. It is not an offer, and no obligation arises until heads of terms are executed. This website does not store the enquiry."
+    ].join("\n");
+    var href = "mailto:" + to + "?subject=" + encodeURIComponent("Enquiry — " + target + " — " + purpose.value) + "&body=" + encodeURIComponent(body);
+    window.location.href = href;
+    sent.hidden = false;
+  });
 })();
