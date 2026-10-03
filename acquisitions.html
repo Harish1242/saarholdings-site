@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Acquisitions — SAAR</title>
   <meta name="description" content="SAAR Holdings Ltd. A Scottish holding company. We run operations, buy trading businesses, and put a back office behind the asset." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <header class="nav" id="nav">
   <a class="wordmark" href="index.html">SAAR</a>
-  <div class="nav-social">
-    <a class="li" href="https://www.linkedin.com/company/saar-holdings-uk-ltd" target="_blank" rel="noopener" aria-label="SAAR Holdings on LinkedIn">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.7 3.3A1.8 1.8 0 1 0 4.7 6.9 1.8 1.8 0 0 0 4.7 3.3zM3.2 8.6h3v12.1h-3zM10 8.6h2.9v1.7h.1c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7v7.3h-3v-6.5c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4v6.6H10z"/></svg>
-    </a>
-    <a class="ig" href="https://www.instagram.com/saarholdings/" target="_blank" rel="noopener" aria-label="SAAR Holdings on Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="2" y1="22" x2="22" y2="2"><stop stop-color="#FEDA75"/><stop offset=".3" stop-color="#FA7E1E"/><stop offset=".55" stop-color="#D62976"/><stop offset=".8" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="#fff" stroke="none"/></svg>
-    </a>
-  </div>
-  <button class="menu" id="menu" aria-label="Menu"><span></span><span></span></button>
+  <button class="menu" id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   <nav class="links" id="links">
     <a href="pathways.html" data-nav="pathways">Pathways</a>
     <a href="holdings.html" data-nav="holdings">Holdings</a>
@@ -31,25 +23,28 @@
   </nav>
 </header>
 
-
 <main>
-  <section class="panel mid">
+
+  <section class="panel">
     <div class="panel-media ken" style="background-image:url('media/street.jpg')"></div>
-    <div class="scrim"></div>
-    <div class="panel-copy"><p class="eyebrow">02</p><h1>Exit with dignity.<br />Exit with value.</h1></div>
-  </section>
-  <section class="page"><div class="wrap">
-    <p class="lead">Direct purchases of trading businesses — sound, tired, or undervalued. Flexible deferred or baseline buyouts, with a clean split of liabilities.</p>
-    <div class="grid">
-      <article class="card"><h3>The preference</h3><p>Freehold with the trade. The holding company owns the property. The trading business services the loan. Family can live on site and run the shop. Due diligence is accepted. It is not a substitute for serviceability.</p></article>
-      <article class="card"><h3>The structure</h3><p>Asset sale or share sale, written to the file. Seller clears creditors where the deal is an asset transfer. Deferred consideration where the numbers support it.</p></article>
-      <article class="card"><h3>The scope</h3><p>Food and hospitality, healthcare and care, property and lettings, logistics and quick commerce, professional services, manufacturing, transportation, trading and shipping.</p></article>
+    <div class="veil"></div>
+    <div class="panel-copy reveal">
+      <p class="eyebrow">02 — Strategic acquisitions</p>
+      <h1>Exit with dignity.<br />Exit with value.</h1>
     </div>
-    <a class="cta" href="contact.html">Open an enquiry</a>
-  </div></section>
+    <a class="scroll" href="#purchase"><span>Scroll</span><i></i></a>
+  </section>
+  <section class="stage sheet" id="purchase">
+    <p class="lead reveal">Direct purchases of trading businesses — sound, tired, or undervalued. Flexible deferred or baseline buyouts, with a clean split of liabilities.</p>
+    <div class="rows reveal">
+      <article class="row"><p class="k">01</p><h3>The preference</h3><p>Freehold with the trade. The holding company owns the property. The trading business services the loan. Family can live on site and run the shop. Due diligence is accepted. It is not a substitute for serviceability.</p></article>
+      <article class="row"><p class="k">02</p><h3>The structure</h3><p>Asset sale or share sale, written to the file. Seller clears creditors where the deal is an asset transfer. Deferred consideration where the numbers support it.</p></article>
+      <article class="row"><p class="k">03</p><h3>The scope</h3><p>Food and hospitality, healthcare and care, property and lettings, logistics and quick commerce, professional services, manufacturing, transportation, trading and shipping.</p></article>
+    </div>
+    <a class="btn" href="contact.html">Open an enquiry</a>
+  </section>
+
 </main>
-
-
 <footer class="foot">
   <a class="wordmark" href="index.html">SAAR</a>
   <nav>
@@ -64,7 +59,5 @@
   <p>© 2026 SAAR Holdings Ltd · SC878352 · Scotland</p>
 </footer>
 <script src="app.js"></script>
-<script>document.querySelectorAll('.links a').forEach(a=>{if(a.dataset.nav&&location.pathname.endsWith(a.getAttribute('href')))a.classList.add('on')});</script>
-
 </body>
 </html>
