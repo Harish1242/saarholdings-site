@@ -1,27 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SAAR — Holdings</title>
   <meta name="description" content="SAAR Holdings Ltd. A Scottish holding company. We run operations, buy trading businesses, and put a back office behind the asset." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,460;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
 <header class="nav" id="nav">
   <a class="wordmark" href="index.html">SAAR</a>
-  <div class="nav-social">
-    <a class="li" href="https://www.linkedin.com/company/saar-holdings-uk-ltd" target="_blank" rel="noopener" aria-label="SAAR Holdings on LinkedIn">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.7 3.3A1.8 1.8 0 1 0 4.7 6.9 1.8 1.8 0 0 0 4.7 3.3zM3.2 8.6h3v12.1h-3zM10 8.6h2.9v1.7h.1c.4-.8 1.4-1.6 2.9-1.6 3.1 0 3.7 2 3.7 4.7v7.3h-3v-6.5c0-1.5 0-3.5-2.1-3.5s-2.5 1.7-2.5 3.4v6.6H10z"/></svg>
-    </a>
-    <a class="ig" href="https://www.instagram.com/saarholdings/" target="_blank" rel="noopener" aria-label="SAAR Holdings on Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="ig" x1="2" y1="22" x2="22" y2="2"><stop stop-color="#FEDA75"/><stop offset=".3" stop-color="#FA7E1E"/><stop offset=".55" stop-color="#D62976"/><stop offset=".8" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="#fff" stroke="none"/></svg>
-    </a>
-  </div>
-  <button class="menu" id="menu" aria-label="Menu"><span></span><span></span></button>
+  <button class="menu" id="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   <nav class="links" id="links">
     <a href="pathways.html" data-nav="pathways">Pathways</a>
     <a href="holdings.html" data-nav="holdings">Holdings</a>
@@ -31,72 +23,92 @@
   </nav>
 </header>
 
-
 <main>
+
   <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline poster="media/yard.jpg">
       <source src="media/hero.mp4" type="video/mp4" />
     </video>
-    <div class="scrim"></div>
+    <div class="veil"></div>
     <div class="hero-copy reveal">
-      <p class="eyebrow">Strategic UK investment & operations</p>
-      <h1>We Build.<br />We Hold.<br />We Grow.</h1>
-      <p class="deck">A Glasgow-based strategic holding company. We collaborate with UK business owners to stabilize daily operations, acquire physical assets, and deploy automated backend structures.</p>
-      <a class="cta" href="holdings.html">Analyze subsidiaries</a>
-      <a class="more" href="pathways.html">Explore value pathways</a>
-    </div>
-    <a class="scroll" href="#board">Scroll</a>
-  </section>
-  <section class="stats">
-    <article class="stat"><b>15+</b><span>UK OPERATING EXPERIENCE</span><p>Specialized in high-street local asset revitalization.</p></article>
-    <article class="stat"><b>35+</b><span>COUNTRIES COVERED</span><p>Global logistics, sourcing and acquisition standards.</p></article>
-    <article class="stat"><b>10+</b><span>ALLIED FIRMS</span><p>Law, accounting, and private equity alliances.</p></article>
-    <article class="stat"><b>Multi</b><span>SECTORS OF EXPERTISE</span><p>Retail, property, logistics, care and F&B channels.</p></article>
-  </section>
-  <section class="board" id="board">
-    <div class="board-head">
-      <h2>The Interactive<br />Achievement Board</h2>
-      <div class="tabs">
-        <button class="on" id="y2026" type="button">2026 Active</button>
-        <button id="y2027" type="button">2027 Targets</button>
+      <p class="eyebrow">Strategic UK investment and operations</p>
+      <h1>We build.<br />We hold.<br />We grow.</h1>
+      <p class="deck">A Glasgow-based strategic holding company. We collaborate with UK business owners to stabilise daily operations, acquire physical assets, and deploy automated backend structures.</p>
+      <div class="actions">
+        <a class="btn" href="holdings.html">Analyse subsidiaries</a>
+        <a class="btn" href="pathways.html">Explore value pathways</a>
       </div>
     </div>
-    <div class="metrics" id="metrics"></div>
-    <div class="brief"><p class="k" id="brief-k">Metric brief (2026)</p><p id="brief"></p></div>
+    <a class="scroll" href="#record"><span>Scroll</span><i></i></a>
   </section>
-  <section class="panel mid" id="routes">
+
+  <section class="stage record" id="record">
+    <div class="reveal">
+      <p class="eyebrow">Operating record</p>
+    </div>
+    <div class="specs reveal">
+      <article><b>15+</b><span>UK operating experience</span><p>Specialised in high-street local asset revitalisation.</p></article>
+      <article><b>35+</b><span>Countries covered</span><p>Global logistics, sourcing and acquisition standards.</p></article>
+      <article><b>10+</b><span>Allied firms</span><p>Law, accounting, and private equity alliances.</p></article>
+      <article><b>Multi</b><span>Sectors of expertise</span><p>Retail, property, logistics, care and F&amp;B channels.</p></article>
+    </div>
+  </section>
+
+  <section class="stage board" id="board">
+    <div class="board-top reveal">
+      <div>
+        <p class="eyebrow">Achievement board</p>
+        <h2>The interactive<br />achievement board</h2>
+      </div>
+      <div class="tabs">
+        <button class="btn on" id="y2026" type="button">2026 active</button>
+        <button class="btn" id="y2027" type="button">2027 targets</button>
+      </div>
+    </div>
+    <div class="board-main reveal">
+      <p class="figure" id="figure">32</p>
+      <div>
+        <p class="k" id="brief-k">Metric brief</p>
+        <p class="lead" id="brief"></p>
+      </div>
+    </div>
+    <div class="picks" id="metrics"></div>
+  </section>
+
+  <section class="panel" id="routes">
     <div class="panel-media ken" style="background-image:url('media/store.jpg')"></div>
-    <div class="scrim"></div>
+    <div class="veil"></div>
     <div class="panel-copy reveal">
       <p class="index">01 — Operational management</p>
       <h2>Keep ownership.<br />Lose the headache.</h2>
       <p>Full day-to-day command under a Management Service Covenant. You keep the asset. We take the floor.</p>
-      <a class="more" href="operations.html">The covenant</a>
+      <a class="link" href="operations.html">The covenant</a>
     </div>
   </section>
-  <section class="panel mid">
+
+  <section class="panel">
     <div class="panel-media ken" style="background-image:url('media/street.jpg')"></div>
-    <div class="scrim"></div>
+    <div class="veil"></div>
     <div class="panel-copy reveal">
       <p class="index">02 — Strategic acquisitions</p>
       <h2>Exit with dignity.<br />Exit with value.</h2>
       <p>We buy trading businesses, preferably with the freehold, so the property sits in the group and the trade services the loan.</p>
-      <a class="more" href="acquisitions.html">The purchase</a>
+      <a class="link" href="acquisitions.html">The purchase</a>
     </div>
   </section>
-  <section class="panel mid">
+
+  <section class="panel">
     <div class="panel-media ken" style="background-image:url('media/ops.jpg')"></div>
-    <div class="scrim"></div>
+    <div class="veil"></div>
     <div class="panel-copy reveal">
       <p class="index">03 — Business services</p>
       <h2>Expert support.<br />Practical results.</h2>
       <p>Audits, layout, and the SAAR-INT platform. A project. No equity required.</p>
-      <a class="more" href="services.html">The work</a>
+      <a class="link" href="services.html">The work</a>
     </div>
   </section>
+
 </main>
-
-
 <footer class="foot">
   <a class="wordmark" href="index.html">SAAR</a>
   <nav>
@@ -111,45 +123,5 @@
   <p>© 2026 SAAR Holdings Ltd · SC878352 · Scotland</p>
 </footer>
 <script src="app.js"></script>
-<script>
-const sets = {
-  2026: [
-    ["32","Businesses evaluated","Entities vetted","Since incorporation in February 2026, the board has screened and scored 32 UK high-street businesses across convenience retail, food service and commercial property."],
-    ["1","Active subsidiary","Trading operations","SAAR Convenience Store Limited, SC890711, is the active trading subsidiary. Location work is underway across Glasgow, Dunblane and central Scotland."],
-    ["3","Running projects","Concept / staging","Three routes are live: operational management, strategic acquisitions, and business services including SAAR-INT."],
-    ["4","Total employees","Expert talent","The operating group is a small desk. Directors, technology, and the subsidiary floor."],
-    ["36","Allied partners","Professional allies","Counsel, accountants and operators across Glasgow, Edinburgh and the wider UK file."],
-    ["£120k","Total valuation","Consolidated value","Consolidated figure carried on the 2026 board."]
-  ],
-  2027: [
-    ["—","Businesses evaluated","Target","2027 targets are not published. The 2026 board remains the live figure."],
-    ["—","Active subsidiary","Target","Subsidiary count is not forecast on the public site."],
-    ["—","Running projects","Target","Project count follows the file, not a published target."],
-    ["—","Total employees","Target","Headcount is not forecast on the public site."],
-    ["—","Allied partners","Target","Alliance count is not forecast on the public site."],
-    ["—","Total valuation","Target","No 2027 valuation is published."]
-  ]
-};
-const box = document.getElementById("metrics");
-const brief = document.getElementById("brief");
-const briefK = document.getElementById("brief-k");
-function draw(year) {
-  box.innerHTML = "";
-  sets[year].forEach((m, i) => {
-    const b = document.createElement("button");
-    b.className = "metric" + (i === 0 ? " on" : "");
-    b.innerHTML = "<b>" + m[0] + "</b><span>" + m[1] + "</span><small>" + m[2] + "</small>";
-    b.onclick = () => { document.querySelectorAll(".metric").forEach(x => x.classList.remove("on")); b.classList.add("on"); briefK.textContent = "Metric brief (" + year + ") — " + m[1]; brief.textContent = m[3]; };
-    box.appendChild(b);
-  });
-  briefK.textContent = "Metric brief (" + year + ") — businesses evaluated";
-  brief.textContent = sets[year][0][3];
-}
-document.getElementById("y2026").onclick = () => { document.getElementById("y2026").classList.add("on"); document.getElementById("y2027").classList.remove("on"); draw(2026); };
-document.getElementById("y2027").onclick = () => { document.getElementById("y2027").classList.add("on"); document.getElementById("y2026").classList.remove("on"); draw(2027); };
-draw(2026);
-</script>
-<script>document.querySelectorAll('.links a').forEach(a=>{if(a.dataset.nav&&location.pathname.endsWith(a.getAttribute('href')))a.classList.add('on')});</script>
-
 </body>
 </html>
