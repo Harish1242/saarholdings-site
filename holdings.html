@@ -3,129 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Holdings | SAAR Holdings</title>
-<meta name="description" content="One active subsidiary, three staged projects, and dormant pipelines.">
+<title>Holdings and subsidiaries | SAAR Holdings</title>
+<meta name="description" content="SAAR Convenience Store, Wrap Republic, Morning Crumbs, SAAR Intelligence and future pipelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@380;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="holdings">
 <header class="nav">
-  <a class="brand" href="index.html">SAAR <span>Holdings</span></a>
+  <a class="brand" href="index.html"><strong>SAAR</strong><span>HOLDINGS</span></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
   <nav class="nav-links" id="nav-links">
     <a href="pathways.html" data-nav="pathways">Pathways</a>
     <a href="holdings.html" data-nav="holdings">Holdings</a>
-    <a href="treasury.html" data-nav="treasury">Treasury</a>
     <a href="partners.html" data-nav="partners">Partners</a>
-    <a href="people.html" data-nav="people">People</a>
-    <a href="contact.html" data-nav="contact">Contact</a>
+    <a href="people.html" data-nav="people">Board</a>
+    <a href="contact.html" data-nav="contact" class="cta">Inquiry</a>
   </nav>
 </header>
 
-<section class="screen" style="background-image:url('media/store.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Holdings and subsidiaries</p>
-    <h1>A portfolio built to compound</h1>
-    <p class="deck">One active subsidiary, three staged projects, and dormant pipelines with defined activation triggers. No physical stores are operational yet.</p>
+<section class="wrap">
+  <p class="kicker">Holdings and subsidiaries</p>
+  <h1>A portfolio built to compound.</h1>
+  <p>One active subsidiary, three staged projects, and dormant pipelines with defined activation triggers. No physical stores are operational yet.</p>
+  <div class="tabs">
+    <button class="on" type="button" data-tab="store">SAAR Convenience Store</button>
+    <button type="button" data-tab="wrap">Wrap Republic</button>
+    <button type="button" data-tab="crumbs">Morning Crumbs</button>
+    <button type="button" data-tab="intel">SAAR Intelligence</button>
+    <button type="button" data-tab="future">Future pipelines</button>
   </div>
-  <div class="scroll-cue">Scroll<i></i></div>
-</section>
-<section class="screen" style="background-image:url('media/street.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <div class="grid g2">
-      <article class="card">
-        <p class="label">Parent venture</p>
-        <h3>SAAR Holdings Ltd</h3>
-        <p>Company number SC878352. Incorporated in Scotland on 9 February 2026.</p>
-        <p>Registered office: 27 Dalziel Crescent, Cambuslang, Glasgow G72 7UR.</p>
-      </article>
-      <article class="card">
-        <p class="label">Active subsidiary</p>
-        <h3>SAAR Convenience Store Limited</h3>
-        <p>Company number SC890711. Registered in Scotland. Status: location scouting and partnership negotiation.</p>
-        <p>The subsidiary has not yet signed leases for any locations. It is in advanced discussions with Morrisons Daily and SPAR for a potential franchise partnership or co-location agreement. Focus regions: Glasgow, Dunblane and central Scotland.</p>
-      </article>
+  <div data-panel="store">
+    <div class="split">
+      <img src="media/store.jpg" alt="Convenience format concept">
+      <div>
+        <p class="label">Location scouting / partnership negotiation</p>
+        <h2>SAAR Convenience Store Limited</h2>
+        <p>Incorporated as SC890711. No leases signed. Actively scouting, and in advanced discussions with Morrisons Daily and SPAR on franchise or co-location. No physical stores are operational yet.</p>
+        <div class="chips"><span>Glasgow</span><span>Dunblane</span><span>Central Scotland</span><span>Morrisons Daily</span><span>SPAR</span></div>
+      </div>
+    </div>
+    <div style="margin-top:28px">
+      <p class="kicker">SAAR-INT · cognitive retail engine · illustrative</p>
+      <h2>The operating brain.</h2>
+      <p>Six modules, architected by CTO Miss Pratibha, MSc AI and Data Management. Figures below are an illustrative model, not a live store.</p>
+      <div class="tabs">
+        <button class="on" type="button" data-mod="demand">01 Demand</button>
+        <button type="button" data-mod="buy">02 Procurement</button>
+        <button type="button" data-mod="price">03 Pricing</button>
+        <button type="button" data-mod="basket">04 Basket</button>
+        <button type="button" data-mod="deliver">05 Delivery</button>
+        <button type="button" data-mod="kpi">06 KPI</button>
+      </div>
+      <div class="grid g3" data-module="demand"><article class="card"><b class="num">272</b><span class="label">Projected transactions / day</span></article><article class="card"><b class="num">£2,399</b><span class="label">Projected gross, illustrative</span></article><article class="card"><b class="num">±5.8%</b><span class="label">Confidence interval</span></article></div>
+      <div class="grid g3" data-module="buy" hidden><article class="card"><h3>Procurement</h3><p>Reorder against stock, near-expiry and forecast. Auto-ticketed markdowns on the shelf edge.</p></article></div>
+      <div class="grid g3" data-module="price" hidden><article class="card"><h3>Dynamic pricing</h3><p>Daypart, competition and near-expiry adjustments. Concept only until a site trades.</p></article></div>
+      <div class="grid g3" data-module="basket" hidden><article class="card"><h3>Basket optimisation</h3><p>Attach rates for food-to-go against the convenience basket.</p></article></div>
+      <div class="grid g3" data-module="deliver" hidden><article class="card"><h3>Delivery pricing</h3><p>Distance, surge and competition-aware fee. Illustrative radius 3 km.</p></article></div>
+      <div class="grid g3" data-module="kpi" hidden><article class="card"><h3>KPI dashboard</h3><p>Transactions, waste, labour hours and gross. Weekly board pack once a site is live.</p></article></div>
     </div>
   </div>
-</section>
-<section class="screen tall" style="background-image:url('media/ops.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Staged project · Setup / staging</p>
-    <h2>Wrap Republic</h2>
-    <p class="deck">A bold-flavour, street-food-led brand — “Jerk it. Stack it. Crunch it.” — staged to operate from SAAR convenience and café sites once leases are signed.</p>
-    <div class="grid g3" style="margin-top:18px">
-      <article class="card"><h3>Wrap Republic Original</h3><p>Grilled wraps, loaded boxes, house sauces — the flagship delivery brand.</p></article>
-      <article class="card"><h3>Republic Bowls</h3><p>High-protein grain and salad bowls for the lunch daypart.</p></article>
-      <article class="card"><h3>Midnight Republic</h3><p>Late-evening Q-commerce menu synchronised with SAAR-INT delivery pricing.</p></article>
+  <div data-panel="wrap" hidden>
+    <div class="split">
+      <img src="media/wrap.jpg" alt="Wrap Republic concept">
+      <div>
+        <p class="label">Setup / staging</p>
+        <h2>Wrap Republic</h2>
+        <p>A bold-flavour, street-food brand — “Jerk it. Stack it. Crunch it.” — staged to operate from SAAR convenience and café sites once leases are signed. Target run-rate: £1m+ annualised across brands. Not trading.</p>
+        <p><b>Wrap Republic Original</b> — grilled wraps, loaded boxes, house sauces.<br><b>Republic Bowls</b> — high-protein grain and salad bowls.<br><b>Midnight Republic</b> — late Q-commerce menu tied to SAAR-INT delivery pricing.</p>
+      </div>
+    </div>
+    <p class="kicker" style="margin-top:22px">Concept menu preview · not a trading offer</p>
+    <div class="card menu"><b>Smoked chicken shawarma wrap</b><span>£7.95</span><b>Peri-peri halloumi box</b><span>£8.50</span><b>Korean BBQ beef wrap</b><span>£8.95</span><b>Falafel and harissa bowl</b><span>£7.50</span><b>Loaded Republic fries</b><span>£4.95</span><b>House mint lemonade</b><span>£2.95</span></div>
+  </div>
+  <div data-panel="crumbs" hidden>
+    <div class="split">
+      <img src="media/bakery.jpg" alt="Morning Crumbs concept">
+      <div>
+        <p class="label">Concept stage</p>
+        <h2>Morning Crumbs</h2>
+        <p>“Soft buns. Warm smiles.” An artisan buns-and-coffee concept for morning commuter corridors, with a mascot, loyalty card and takeaway packaging. Palette: espresso brown, blush pink, oat cream.</p>
+        <div class="swatch"><i style="background:#4a3428"></i><i style="background:#e7c1c7"></i><i style="background:#f3ead7"></i></div>
+      </div>
+    </div>
+    <p class="kicker" style="margin-top:22px">Concept menu preview · not a trading offer</p>
+    <div class="grid g3">
+      <article class="card"><h3>Savoury</h3><div class="menu"><b>Cheddar and chive scone</b><span>£3.20</span><b>Sausage and fennel roll</b><span>£4.10</span><b>Mushroom Gruyère croissant</b><span>£4.60</span><b>Sourdough toastie</b><span>£5.80</span></div></article>
+      <article class="card"><h3>Drinks</h3><div class="menu"><b>Flat white</b><span>£3.40</span><b>Oat latte</b><span>£3.70</span><b>Espresso, double</b><span>£2.60</span><b>Spiced chai</b><span>£3.50</span><b>Cold brew</b><span>£3.90</span></div></article>
+      <article class="card"><h3>Sweet bakes</h3><div class="menu"><b>Morning crumb bun</b><span>£3.30</span><b>Lilac berry tart</b><span>£4.20</span><b>Oat and honey cookie</b><span>£2.40</span><b>Cinnamon morning twist</b><span>£3.60</span></div></article>
     </div>
   </div>
-</section>
-<section class="screen" style="background-image:url('media/plant.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Staged project · Concept stage</p>
-    <h2>Morning Crumbs</h2>
-    <p class="deck">“Soft buns. Warm smiles.” An artisan buns-and-coffee concept engineered around morning commuter corridors — with its own illustrated mascot, loyalty-card programme and takeaway packaging system. Brand palette: espresso brown, blush pink and oat cream.</p>
-  </div>
-</section>
-<section class="screen" style="background-image:url('media/bay.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Staged project · Platform active</p>
-    <h2>SAAR Intelligence</h2>
-    <p class="deck">The group’s technology arm, led by CTO and digital architect Miss Pratibha (MSc in AI and Data Management). SAAR Intelligence develops and owns the SAAR-INT platform, with a stated goal of productising the engine as a B2B SaaS offering for independent UK retailers.</p>
-    <div class="grid g2" style="margin-top:16px">
-      <article class="card"><h3>SAAR-INT cognitive engine</h3><p>Six-module retail intelligence: demand, procurement, pricing, basket, delivery, KPI.</p></article>
-      <article class="card"><h3>Shelf-edge automation</h3><p>Real-time computerised inventory nodes with auto-ticketed markdowns.</p></article>
-      <article class="card"><h3>Q-commerce pricing model</h3><p>Distance-, surge- and competition-aware delivery fee computation.</p></article>
-      <article class="card"><h3>Forecast dataset</h3><p>SKU-level trading data across evaluated UK convenience businesses.</p></article>
+  <div data-panel="intel" hidden>
+    <div class="split">
+      <div>
+        <p class="label">Platform active</p>
+        <h2>SAAR Intelligence</h2>
+        <p>The technology arm, led by CTO and digital architect Miss Pratibha. SAAR Intelligence owns the SAAR-INT platform, with a stated goal of productising the engine as B2B SaaS for independent UK retailers.</p>
+        <a class="btn" href="people.html">Meet the CTO</a>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>SAAR-INT cognitive engine</h3><p>Demand, procurement, pricing, basket, delivery, KPI.</p></article>
+        <article class="card"><h3>Shelf-edge automation</h3><p>Real-time inventory nodes and auto-ticketed markdowns.</p></article>
+        <article class="card"><h3>Q-commerce pricing</h3><p>Distance, surge and competition-aware delivery fees.</p></article>
+        <article class="card"><h3>Forecast dataset</h3><p>SKU-level patterns from evaluated UK convenience businesses.</p></article>
+      </div>
     </div>
   </div>
-</section>
-<section class="screen" style="background-image:url('media/yard.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Dormant</p>
+  <div data-panel="future" hidden>
+    <p class="label">Dormant until the trigger</p>
     <h2>Future pipelines</h2>
-    <p class="deck">Dormant formats with pre-defined activation triggers, designed to compound the convenience estate once scale thresholds are reached. They are not trading.</p>
-    <div class="grid g2" style="margin-top:16px">
-      <article class="card"><h3>SAAR Deliveries</h3><p>Dedicated Q-commerce courier fleet and dark-shelf fulfilment, powered by SAAR-INT delivery pricing. Activation trigger: 20+ trading stores.</p></article>
-      <article class="card"><h3>SAAR Logistics</h3><p>Consolidated group distribution and wholesale buying across the estate, with cold-chain nodes. Activation trigger: 35+ trading sites.</p></article>
+    <div class="grid g2">
+      <article class="card"><h3>SAAR Deliveries</h3><p>Q-commerce courier and dark-shelf fulfilment, priced by SAAR-INT.</p><p><span class="label">Activation</span> 20+ trading stores</p></article>
+      <article class="card"><h3>SAAR Logistics</h3><p>Group distribution and wholesale buying, with cold-chain nodes.</p><p><span class="label">Activation</span> 35+ trading sites</p></article>
     </div>
-    <p class="kicker" style="margin-top:22px">Eight sectors</p>
-    <p class="note">Food and hospitality · Healthcare and care · Property and lettings · Logistics and Q-commerce · Professional services · Manufacturing · Transportation · Trading and shipping.</p>
+    <img src="media/yard.jpg" alt="Logistics yard concept" style="margin-top:18px;border-radius:22px;max-height:420px;width:100%;object-fit:cover">
   </div>
 </section>
 
 <footer class="site">
-  <div class="veil"></div>
-  <div class="inner">
-    <div class="foot-grid">
-      <div>
-        <p class="kicker">Registered office</p>
-        <p>27 Dalziel Crescent, Cambuslang, Glasgow G72 7UR, Scotland, UK</p>
-        <p>SAAR Holdings Ltd · SC878352<br>Incorporated 9 February 2026</p>
-      </div>
-      <div>
-        <p class="kicker">Desk</p>
-        <p><a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br>
-        <a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a><br>
-        <a href="tel:+447359574175">+44 7359 574175</a><br>
-        Mon–Fri 09:00–17:00 GMT</p>
-      </div>
-      <div>
-        <p class="kicker">Channels</p>
-        <p><a href="https://www.linkedin.com/company/saar-holdings-uk-ltd">LinkedIn</a><br>
-        <a href="https://www.instagram.com/saarholdings/">Instagram</a></p>
-      </div>
+  <div class="foot-grid">
+    <div>
+      <p class="kicker">Strategic governance and turnarounds</p>
+      <p>We Build. We Hold. We Grow.</p>
+      <p>SAAR Holdings is a UK-based strategic investment and operational management company.</p>
+      <p>27 Dalziel Crescent, Cambuslang, Glasgow, G72 7UR, Scotland, UK</p>
     </div>
-    <p class="fine">© 2026 SAAR Holdings Ltd. Registered in Scotland, SC878352. Content is a strategic directory brief only and does not constitute a direct offer for public retail licensing or investment advice.</p>
+    <div>
+      <p class="kicker">Desk</p>
+      <p><a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br>
+      <a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a><br>
+      <a href="tel:+447359574175">+44 7359 574175</a><br>Mon–Fri 09:00–17:00 GMT</p>
+    </div>
+    <div>
+      <p class="kicker">Channels</p>
+      <p><a href="https://www.linkedin.com/company/saar-holdings-uk-ltd/">LinkedIn</a><br>
+      <a href="https://www.instagram.com/saarholdings/">Instagram</a></p>
+      <p class="kicker">UK registrations</p>
+      <p>SAAR Holdings Ltd · SC878352<br>Incorporated 9 February 2026 · Scotland<br>
+      SAAR Convenience Store Limited · SC890711</p>
+    </div>
   </div>
+  <p class="fine">© 2026 SAAR Holdings Ltd. Registered in Scotland. Content is a strategic directory brief only and does not constitute a direct offer for public retail licensing or investment advice. No physical stores are operational yet.</p>
 </footer>
 <script src="app.js"></script>
 </body>

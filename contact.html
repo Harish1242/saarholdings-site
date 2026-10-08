@@ -4,116 +4,86 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Inquiry desk | SAAR Holdings</title>
-<meta name="description" content="Enquiry desk for SAAR Holdings Ltd and SAAR Convenience Store Ltd.">
+<meta name="description" content="Formal enquiry desk for SAAR Holdings Ltd and SAAR Convenience Store Ltd.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@380;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="contact">
 <header class="nav">
-  <a class="brand" href="index.html">SAAR <span>Holdings</span></a>
+  <a class="brand" href="index.html"><strong>SAAR</strong><span>HOLDINGS</span></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
   <nav class="nav-links" id="nav-links">
     <a href="pathways.html" data-nav="pathways">Pathways</a>
     <a href="holdings.html" data-nav="holdings">Holdings</a>
-    <a href="treasury.html" data-nav="treasury">Treasury</a>
     <a href="partners.html" data-nav="partners">Partners</a>
-    <a href="people.html" data-nav="people">People</a>
-    <a href="contact.html" data-nav="contact">Contact</a>
+    <a href="people.html" data-nav="people">Board</a>
+    <a href="contact.html" data-nav="contact" class="cta">Inquiry</a>
   </nav>
 </header>
 
-<section class="screen" style="background-image:url('media/street.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <p class="kicker">Inquiry desk</p>
-    <h1>Open a formal channel</h1>
-    <p class="deck">The board reviews formal enquiries within five working days. This form does not write to a ledger. Send the enquiry opens your email client with the fields in the body. Nothing is stored on this website.</p>
-  </div>
-  <div class="scroll-cue">Scroll<i></i></div>
-</section>
-<section class="screen tall" style="background-image:url('media/store.jpg')">
-  <div class="veil"></div>
-  <div class="inner">
-    <div class="grid g2">
-      <form id="enquiry" novalidate>
-        <p class="kicker" id="step-label">Step 01 — Select inquiry target</p>
-        <div data-step="1">
-          <div class="choices">
-            <button class="choice" type="button" data-target="SAAR Holdings Ltd">
-              <strong>SAAR Holdings Ltd</strong>
-              <p>Management covenants, acquisitions, services, treasury.</p>
-            </button>
-            <button class="choice" type="button" data-target="SAAR Convenience Store Ltd">
-              <strong>SAAR Convenience Store Ltd</strong>
-              <p>Franchise, sites, suppliers, store formats.</p>
-            </button>
-          </div>
+<section class="wrap">
+  <p class="kicker">Inquiry desk</p>
+  <h1>Open a formal channel.</h1>
+  <p>The board reviews formal enquiries within five working days. This form does not write to a ledger. Send opens your email client. Nothing is stored on this website.</p>
+  <div class="grid g2">
+    <form id="enquiry" novalidate>
+      <p class="kicker" id="step-label">Step 01 — Select inquiry target</p>
+      <div data-step="1">
+        <div class="choices">
+          <button class="choice" type="button" data-target="SAAR Holdings Ltd"><strong>SAAR Holdings Ltd</strong><p>Management covenants, acquisitions, services.</p></button>
+          <button class="choice" type="button" data-target="SAAR Convenience Store Ltd"><strong>SAAR Convenience Store Ltd</strong><p>Franchise, sites, suppliers, store formats.</p></button>
         </div>
-        <div data-step="2" hidden>
-          <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field">
-            <label for="purpose">Purpose of inquiry</label>
-            <select id="purpose" name="purpose" required>
-              <option value="">Select purpose</option>
-            </select>
-          </div>
-        </div>
-        <div data-step="3" hidden>
-          <div class="field">
-            <label for="dossier">Proposal dossier</label>
-            <textarea id="dossier" name="dossier" rows="8" minlength="20" required placeholder="Set out the asset, site or proposal; current trading position; and the structure you are seeking."></textarea>
-            <p class="note"><span id="count">0</span> characters · minimum 20</p>
-          </div>
-        </div>
-        <p class="error" id="form-error" role="alert"></p>
-        <div class="actions">
-          <button class="btn" type="button" id="back" hidden>Back</button>
-          <button class="btn solid" type="button" id="next">Continue</button>
-        </div>
-        <p class="note" id="sent" hidden>Your email client should open with this enquiry addressed to the desk. If it does not, write to the address shown. This website has not stored the enquiry. Submission is not an offer, and no obligation arises on either party until heads of terms are executed.</p>
-      </form>
-      <aside>
-        <p class="kicker">Glasgow connect desk</p>
-        <p><span class="label">Telephone</span><br><a href="tel:+447359574175">+44 7359 574175</a></p>
-        <p><span class="label">Email</span><br>
-          <a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br>
-          <a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a></p>
-        <p><span class="label">Hours</span><br>Mon–Fri 09:00–17:00 GMT</p>
-        <p><span class="label">Registered office</span><br>27 Dalziel Crescent, Cambuslang, Glasgow G72 7UR, Scotland, UK</p>
-        <p class="note">All inquiries are recorded against the corporate records of SAAR Holdings Ltd (SC878352) when you email the desk, and reviewed under the group’s governance covenant. Submission does not constitute an offer, and no obligation arises on either party until heads of terms are executed.</p>
-      </aside>
-    </div>
+      </div>
+      <div data-step="2" hidden>
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="purpose">Purpose of inquiry</label><select id="purpose" name="purpose" required><option value="">Select purpose</option></select></div>
+      </div>
+      <div data-step="3" hidden>
+        <div class="field"><label for="dossier">Proposal dossier</label><textarea id="dossier" name="dossier" rows="8" required placeholder="Set out the asset, site or proposal; current trading position; and the structure you are seeking."></textarea><p class="note"><span id="count">0</span> characters · minimum 20</p></div>
+      </div>
+      <p class="error" id="form-error" role="alert"></p>
+      <div class="actions"><button class="btn" type="button" id="back" hidden>Back</button><button class="btn solid" type="button" id="next">Continue</button></div>
+      <p class="note" id="sent" hidden>Your email client should open with this enquiry. If it does not, write to the desk. This website has not stored it. Submission is not an offer.</p>
+    </form>
+    <aside class="card">
+      <p class="kicker">Glasgow connect desk</p>
+      <p><span class="label">Telephone</span><br><a href="tel:+447359574175">+44 7359 574175</a></p>
+      <p><span class="label">Email</span><br><a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br><a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a></p>
+      <p><span class="label">Hours</span><br>Mon–Fri 09:00–17:00 GMT</p>
+      <p><span class="label">Registered office</span><br>27 Dalziel Crescent, Cambuslang, Glasgow G72 7UR, Scotland, UK</p>
+      <p class="note">Enquiries are reviewed against the records of SAAR Holdings Ltd (SC878352) when you email the desk. No obligation arises until heads of terms are executed.</p>
+    </aside>
   </div>
 </section>
 
 <footer class="site">
-  <div class="veil"></div>
-  <div class="inner">
-    <div class="foot-grid">
-      <div>
-        <p class="kicker">Registered office</p>
-        <p>27 Dalziel Crescent, Cambuslang, Glasgow G72 7UR, Scotland, UK</p>
-        <p>SAAR Holdings Ltd · SC878352<br>Incorporated 9 February 2026</p>
-      </div>
-      <div>
-        <p class="kicker">Desk</p>
-        <p><a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br>
-        <a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a><br>
-        <a href="tel:+447359574175">+44 7359 574175</a><br>
-        Mon–Fri 09:00–17:00 GMT</p>
-      </div>
-      <div>
-        <p class="kicker">Channels</p>
-        <p><a href="https://www.linkedin.com/company/saar-holdings-uk-ltd">LinkedIn</a><br>
-        <a href="https://www.instagram.com/saarholdings/">Instagram</a></p>
-      </div>
+  <div class="foot-grid">
+    <div>
+      <p class="kicker">Strategic governance and turnarounds</p>
+      <p>We Build. We Hold. We Grow.</p>
+      <p>SAAR Holdings is a UK-based strategic investment and operational management company.</p>
+      <p>27 Dalziel Crescent, Cambuslang, Glasgow, G72 7UR, Scotland, UK</p>
     </div>
-    <p class="fine">© 2026 SAAR Holdings Ltd. Registered in Scotland, SC878352. Content is a strategic directory brief only and does not constitute a direct offer for public retail licensing or investment advice.</p>
+    <div>
+      <p class="kicker">Desk</p>
+      <p><a href="mailto:operations@saarholdings.co.uk">operations@saarholdings.co.uk</a><br>
+      <a href="mailto:treasury@saarholdings.co.uk">treasury@saarholdings.co.uk</a><br>
+      <a href="tel:+447359574175">+44 7359 574175</a><br>Mon–Fri 09:00–17:00 GMT</p>
+    </div>
+    <div>
+      <p class="kicker">Channels</p>
+      <p><a href="https://www.linkedin.com/company/saar-holdings-uk-ltd/">LinkedIn</a><br>
+      <a href="https://www.instagram.com/saarholdings/">Instagram</a></p>
+      <p class="kicker">UK registrations</p>
+      <p>SAAR Holdings Ltd · SC878352<br>Incorporated 9 February 2026 · Scotland<br>
+      SAAR Convenience Store Limited · SC890711</p>
+    </div>
   </div>
+  <p class="fine">© 2026 SAAR Holdings Ltd. Registered in Scotland. Content is a strategic directory brief only and does not constitute a direct offer for public retail licensing or investment advice. No physical stores are operational yet.</p>
 </footer>
 <script src="app.js"></script>
 </body>
